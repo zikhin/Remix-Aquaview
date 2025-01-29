@@ -1,31 +1,65 @@
 import { NavLink,Link } from "@remix-run/react";
+import { useState } from "react";
 import { ShoppingBagIcon } from '@heroicons/react/24/outline';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross1 } from "react-icons/rx";
+
 
 import Search from "./Search";
 
 export default function Header(){
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
-        <header className="w-full flex flex-wrap flex-col md:flex-row md:justify-between items-center bg-violet-100 h-auto md:h-16 px-4 py-2" >
-            <img className= " hover:bg-red-500" src= "" alt="Aquaview Aquarium"/> 
-            <nav className="flex flex-nowrap justify-center items-center gap-4 ">
-            <NavLink className= "p-2 hover:bg-red-500">Home</NavLink>
-            <NavLink className= "p-2 hover:bg-red-500">Product</NavLink>
-            <NavLink className= "p-2 mr-12 hover:bg-red-500">Service</NavLink>
-            <Search  className= "p-2 hover:bg-red-500"/>
-            <NavLink className= "pl-36 p-2 hover:bg-red-500 ">About</NavLink>
-            <NavLink className= "p-2 hover:bg-red-500 ">Contact</NavLink>
-            </nav>
-            <div className="flex justify-center items-center gap-10">
-            <span>$0.00</span>
-            <Link className="w-8 h-8 bg-opacity-20 rounded text-black "><ShoppingBagIcon></ShoppingBagIcon></Link>
-            { false && <Link className= "w-4 h-6 hover:bg-red-500"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-</svg>
-</Link>}
-            </div>
-        </header>
-        <h1>Header for Aquaview</h1>
+       <header className="w-full bg-violet-100 shadow-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+           {/* Logo */}
+          <img className="h-10 hover:bg-red-500" src="" alt="Aquaview Aquarium" />
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Home</NavLink>
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Product</NavLink>
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Service</NavLink>
+             <Search className="p-2 mx-4 " />
+             <NavLink className="p-2 hover:text-red-600 transition duration-300">About</NavLink>
+             <NavLink className="p-2 hover:text-red-600 transition duration-300">Contact</NavLink>
+           </nav>
+
+          {/* Shopping Cart & Mobile Menu Button */}
+          <div className="flex items-center gap-6">
+              <span>$0.00</span>
+            <Link >
+              <ShoppingBagIcon className="h-6 w-6" />
+            </Link>
+
+             {/* Mobile Menu Button */}
+             <button
+         className="md:hidden focus:outline-none"
+               onClick={() => setMenuOpen(!menuOpen)}
+             >
+               {menuOpen ? (
+                 <RxCross1 className="h-8 w-8" />
+               ) : (
+                 <GiHamburgerMenu 
+                 className="h-8 w-8 "  />
+               )}
+             </button>
+           </div>
+         </div>
+
+        {/* Mobile Navigation (Collapsible) */}
+        {menuOpen && (
+          <nav className="md:hidden flex flex-col items-center space-y-4 py-4 bg-violet-200">
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Home</NavLink>
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Product</NavLink>
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Service</NavLink>
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">About</NavLink>
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Contact</NavLink>
+          </nav>
+        )}
+      </div>
+    </header> 
         </>
-    )
+)
 }

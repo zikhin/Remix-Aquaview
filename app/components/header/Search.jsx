@@ -10,7 +10,7 @@ export default function search(){
             type="search"
             name="q"
             placeholder={('search')}
-            className="rounded-full text-center w-60"
+            className="rounded-full text-center w-60 mx-2"
             />
         </Form>
       );
