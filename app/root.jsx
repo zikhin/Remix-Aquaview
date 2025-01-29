@@ -7,6 +7,8 @@ import {
 } from "@remix-run/react";
 
 import "./tailwind.css";
+import Header from "./components/header/Header";
+import Footer from "./components/Footer";
 
 export const links = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -40,5 +42,10 @@ export function Layout({ children }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+  <>
+  <Header/>
+  <Outlet />
+  <Footer/>
+  </>)
 }
