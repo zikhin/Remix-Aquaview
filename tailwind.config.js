@@ -4,6 +4,8 @@ export default {
     extend: {
       fontFamily: {
         sans: [
+          "Montserrat",
+          "Noto Sans",
           "Inter",
           "ui-sans-serif",
           "system-ui",
