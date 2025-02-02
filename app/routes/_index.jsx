@@ -1,3 +1,7 @@
+import Header from "../components/header/Header";
+import Footer from "../components/Footer";
+import Home from "./Home";
+
 export const meta = () => {
   return [
     { title: "New Remix App" },
@@ -7,8 +11,10 @@ export const meta = () => {
 
 export default function Index() {
   return (
-    <div className="flex items-center justify-center">
-      <h1>Aquaview</h1>
-    </div>
+<>
+        <Header/>
+        <Home/>
+        <Footer/>
+</>
   );
 }

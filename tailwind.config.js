@@ -1,6 +1,9 @@
 export default {
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         sans: [

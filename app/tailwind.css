@@ -13,3 +13,13 @@ body {
     color-scheme: dark;
   }
 }
+
+header{
+  @apply bg-[#ffffff]  opacity-60 text-black text-xl font-semibold
+
+}
+
+  span{
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+  }
