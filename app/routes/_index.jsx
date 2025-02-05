@@ -1,5 +1,3 @@
-import Header from "../components/header/Header";
-import Footer from "../components/Footer";
 import Home from "./Home";
 
 export const meta = () => {
@@ -12,9 +10,7 @@ export const meta = () => {
 export default function Index() {
   return (
 <>
-        <Header/>
         <Home/>
-        <Footer/>
 </>
   );
 }

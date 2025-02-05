@@ -4,6 +4,9 @@ export default {
     container: {
       center: true,
     },
+      backgroundImage: theme => ({
+       'home-page': "url('./app/images/homepage-background.png')",
+      }),
     extend: {
       fontFamily: {
         sans: [

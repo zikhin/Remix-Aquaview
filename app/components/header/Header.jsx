@@ -12,7 +12,7 @@ export default function Header(){
     const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
-       <header className="max-w-1/2 shadow-md">
+       <header className="max-w-1/2 shadow-md overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
 
@@ -59,8 +59,8 @@ export default function Header(){
         )}
       </div>
     </header> 
-      <section className="hidden" >
-            <img className="object-cover w-svh h-svh lg:w-dvw lg:h-dvh "src={homeImage} atl="home image"  />
+      <section className="" >
+            <img className="object-cover bg-fixed w-svh h-svh lg:w-dvw lg:h-dvh "src={homeImage} atl="home image"  />
       </section>
       <div className="flex flex-col text-3xl justify-center items-center text-[#1f2937] font-bold my-5">
             We build Aquarium is your desire shape and size
