@@ -33,23 +33,21 @@ export default function Home() {
                             good way to  reduce stress</p>
                     </div>
                 </section>
-                <section>
-                    <div className="border-3 columns-3 border-black w-[90%] h-svh">
-                        <div className=" text-black border-2 border-black w-1/3">
-                            <p className=" font-extrabold lg:text-4xl text-xl">Convert Tour Traditional Aquavarium To Planted Aquarium</p>
-                            <div className="border-b-4 border-[#fb2056] w-24 my-4" ></div>
+                <section className=" flex w-[90%] h-fit mt-6">
+                        <div className=" w-1/3 px-6 text-[#1f2937]">
+                            <p className=" font-bold lg:text-3xl text-xl ">Convert Your Traditional Aquavarium To Planted Aquarium</p>
+                            <div className="border-b-4 border-[#fb2056] w-24 my-5 text-sm/6" ></div>
                             <p>Planted tanks are a popular and repidly growing segment of the aquarium hobby.
                                 one that allows hobbyists to combine the beauty of nature with the benefits of a balanced ecosystem . 
                                 unlike a tradition aquarium ,live plants are the primary focus,with fish being an accent or compliment to the overall effect                            </p>
                         </div>
-                        <div className="flex flex-col border-black w-1/3 h-svh">
-                            <img className="block " src={commercial} alt="" />
-                            <img className="block " src={commercial} alt="" />
+                        <div className="flex flex-col gap-4 px-10 mx-2 w-1/3 h-auto">
+                            <img className="rounded-lg" src={commercial} alt="" />
+                            <img className="rounded-lg" src={commercial} alt="" />
                         </div>
-                        <div className=" border-black w-1/3 h-svh" >
-                            <img className="block" src={commercial} alt="comm" />
+                        <div className=" w-1/3 mx-4 h-8" >
+                            <img className="  rounded-lg" src={commercial} alt="comm" />
                         </div>
-                    </div>
                 </section>
             </section>
         </>

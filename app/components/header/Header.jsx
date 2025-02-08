@@ -13,7 +13,7 @@ export default function Header(){
     return (
         <>
        <header className="max-w-1/2 shadow-md overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="flex justify-between items-center py-4">
 
           <img className="h-10 hover:bg-red-500" src="" alt="Aquaview Aquarium" />
@@ -21,8 +21,8 @@ export default function Header(){
           <nav className="hidden md:flex items-center gap-6">
             <NavLink className="p-2 hover:text-red-600 transition duration-300">Home</NavLink>
             <NavLink className="p-2 hover:text-red-600 transition duration-300">Product</NavLink>
-            <NavLink className="p-2 hover:text-red-600 transition duration-300">Service</NavLink>
              <Search className="p-2 mx-4 " />
+            <NavLink className="p-2 hover:text-red-600 transition duration-300">Service</NavLink>
              <NavLink className="p-2 hover:text-red-600 transition duration-300">About</NavLink>
              <NavLink className="p-2 hover:text-red-600 transition duration-300">Contact</NavLink>
            </nav>
